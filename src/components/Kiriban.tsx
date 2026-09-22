@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { kiribanOf } from "@/lib/kiriban";
-import { XIcon } from "./icons";
+import { TwitterIcon } from "./icons";
 
 const DIRECT_URL = "https://kauntah-svg.vercel.app/counter.svg";
 const HIDDEN_KEY = "kiriban-hidden";
@@ -95,13 +95,13 @@ export default function Kiriban() {
         <a
           className="btn btn--cta kiriban__post"
           // Only rendered client-side (after the count loads), so `window` is safe here.
-          href={`https://x.com/intent/post?text=${encodeURIComponent(`${window.location.origin}/\nキリ番をゲットしました！`)}`}
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${window.location.origin}/\nキリ番をゲットしました！`)}`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="キリ番をポストする(新しいタブで開く)"
+          aria-label="キリ番をツイートする(新しいタブで開く)"
         >
-          <XIcon className="btn__icon" size={12} />
-          <span>キリ番をポストする</span>
+          <TwitterIcon className="btn__icon" size={12} />
+          <span>キリ番をツイートする</span>
           <span className="btn__ext" aria-hidden="true">
             ↗
           </span>
@@ -114,8 +114,8 @@ export default function Kiriban() {
           title="キリ番を踏むと押せます"
           aria-describedby="kiriban-post-hint"
         >
-          <XIcon className="btn__icon" size={12} />
-          <span>キリ番をポストする</span>
+          <TwitterIcon className="btn__icon" size={12} />
+          <span>キリ番をツイートする</span>
           <span id="kiriban-post-hint" className="sr-only">
             キリ番を踏むと押せます
           </span>

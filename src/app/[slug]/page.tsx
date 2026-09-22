@@ -56,7 +56,7 @@ export default async function Page(props: Props) {
                         {line.slice(0, line.indexOf(HANDLE))}
                         <a
                           className="memo__link"
-                          href="https://x.com/0168th"
+                          href="https://twitter.com/0168th"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="@0168th(新しいタブで開く)"

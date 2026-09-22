@@ -32,7 +32,7 @@ const COMMANDS: Command[] = [
   { label: "Gear", hint: "Section", href: "/#gear" },
   { label: "問い合わせフォーム", hint: "Page", href: "/contact" },
   { label: "GitHub (0266st)", hint: "Open ↗", href: "https://github.com/0266st", external: true },
-  { label: "X (0168th)", hint: "Open ↗", href: "https://x.com/0168th", external: true },
+  { label: "Twitter (@0168th)", hint: "Open ↗", href: "https://twitter.com/0168th", external: true },
   { label: "YouTube (@0266st)", hint: "Open ↗", href: "https://www.youtube.com/@0266st", external: true },
   { label: "BOOTH (ztssst)", hint: "Open ↗", href: "https://ztssst.booth.pm/", external: true },
   themeCommand("light"),

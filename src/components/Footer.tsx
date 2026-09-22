@@ -3,7 +3,7 @@ import { ROLES } from "@/lib/profile";
 import { AGE_PUBLIC_KEY, SSH_PUBLIC_KEY } from "@/lib/keys";
 import { sshFingerprintArt } from "@/lib/ssh-randomart";
 import Link from "next/link";
-import { FormIcon, GitHubIcon, MailIcon, ShopIcon, XIcon, YouTubeIcon } from "./icons";
+import { FormIcon, GitHubIcon, MailIcon, ShopIcon, TwitterIcon, YouTubeIcon } from "./icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -26,12 +26,12 @@ export default function Footer() {
             <span className="sr-only">(新しいタブで開く)</span>
           </a>
           <a
-            href="https://x.com/0168th"
+            href="https://twitter.com/0168th"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <XIcon className="foot-mast__icon" size={14} />
-            <span className="foot-mast__label">X</span>
+            <TwitterIcon className="foot-mast__icon" />
+            <span className="foot-mast__label">Twitter</span>
             <span aria-hidden="true">↗</span>
             <span className="sr-only">(新しいタブで開く)</span>
           </a>
