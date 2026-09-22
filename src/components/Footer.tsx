@@ -3,7 +3,7 @@ import { ROLES } from "@/lib/profile";
 import { AGE_PUBLIC_KEY, SSH_PUBLIC_KEY } from "@/lib/keys";
 import { sshFingerprintArt } from "@/lib/ssh-randomart";
 import Link from "next/link";
-import { FormIcon, GitHubIcon, MailIcon, XIcon } from "./icons";
+import { FormIcon, GitHubIcon, MailIcon, XIcon, YouTubeIcon } from "./icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,6 +32,16 @@ export default function Footer() {
           >
             <XIcon className="foot-mast__icon" size={14} />
             <span className="foot-mast__label">X</span>
+            <span aria-hidden="true">↗</span>
+            <span className="sr-only">(新しいタブで開く)</span>
+          </a>
+          <a
+            href="https://www.youtube.com/@0266st"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <YouTubeIcon className="foot-mast__icon" />
+            <span className="foot-mast__label">YouTube</span>
             <span aria-hidden="true">↗</span>
             <span className="sr-only">(新しいタブで開く)</span>
           </a>
