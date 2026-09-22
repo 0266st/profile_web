@@ -33,6 +33,16 @@ export function YouTubeIcon({ className, size = 16 }: IconProps) {
   );
 }
 
+// Generic shopping bag (BOOTH has no official single-colour mark to reuse).
+export function ShopIcon({ className, size = 16 }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V9" />
+      <path fill="currentColor" d="M5.9 7h12.2a1 1 0 0 1 1 .92l1 12A1 1 0 0 1 19.1 21H4.9a1 1 0 0 1-1-1.08l1-12A1 1 0 0 1 5.9 7Z" />
+    </svg>
+  );
+}
+
 export function FormIcon({ className, size = 16 }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">

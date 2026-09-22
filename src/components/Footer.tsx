@@ -3,7 +3,7 @@ import { ROLES } from "@/lib/profile";
 import { AGE_PUBLIC_KEY, SSH_PUBLIC_KEY } from "@/lib/keys";
 import { sshFingerprintArt } from "@/lib/ssh-randomart";
 import Link from "next/link";
-import { FormIcon, GitHubIcon, MailIcon, XIcon, YouTubeIcon } from "./icons";
+import { FormIcon, GitHubIcon, MailIcon, ShopIcon, XIcon, YouTubeIcon } from "./icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -42,6 +42,16 @@ export default function Footer() {
           >
             <YouTubeIcon className="foot-mast__icon" />
             <span className="foot-mast__label">YouTube</span>
+            <span aria-hidden="true">↗</span>
+            <span className="sr-only">(新しいタブで開く)</span>
+          </a>
+          <a
+            href="https://ztssst.booth.pm/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ShopIcon className="foot-mast__icon" />
+            <span className="foot-mast__label">BOOTH</span>
             <span aria-hidden="true">↗</span>
             <span className="sr-only">(新しいタブで開く)</span>
           </a>
