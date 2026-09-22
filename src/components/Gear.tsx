@@ -1,7 +1,4 @@
-const GEAR: [string, string][] = [
-  ["DAW", "Ableton Live"],
-  ["Vocaloids", "SV2 宮舞モカ"],
-];
+import { GEAR } from "@/lib/gear";
 
 const MENU = ["File", "Edit", "View", "Help"];
 

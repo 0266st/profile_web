@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { ROLES } from "@/lib/profile";
 import { THEME_INIT_SCRIPT } from "@/lib/theme-script";
@@ -22,10 +22,32 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
+const DESCRIPTION =
+  "0266st / 0168th のポートフォリオ。madgen、VOICEVOX TTS Engine for Android などの開発と、EDM / DTM。";
+// What link previews (Discord, X, …) show as the headline.
+const SHARE_TITLE = "Portfolio - profile.ztssst.dev";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL ?? "https://profile.ztssst.dev"),
   title: `0266st / 0168th — ${ROLES.join(" · ")}`,
-  description:
-    "0266st / 0168th のポートフォリオ。madgen、VOICEVOX TTS Engine for Android などの開発と、EDM / DTM。",
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    siteName: "profile.ztssst.dev",
+    locale: "ja_JP",
+    title: SHARE_TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SHARE_TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+// Discord tints the embed's side bar with this.
+export const viewport: Viewport = {
+  themeColor: "#f37fb0",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
