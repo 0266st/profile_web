@@ -1,0 +1,155 @@
+/* Hallmark · design tokens · theme: Cobalt (cobalt-on-light) · genre: modern-minimal */
+
+:root {
+  color-scheme: light;
+
+  /* Paper / surfaces — cool engineered near-white, hue ~250 */
+  --color-paper: oklch(98.5% 0.004 250);
+  --color-paper-2: oklch(95.5% 0.007 250);
+  --color-rule: oklch(89% 0.007 250);
+  --color-rule-2: oklch(80% 0.01 250);
+
+  /* Ink */
+  --color-ink: oklch(24% 0.02 258);
+  --color-ink-2: oklch(34% 0.018 257);
+  --color-muted: oklch(52% 0.014 257);
+
+  /* Accent — electric cobalt, used as a signal only */
+  --color-accent: oklch(58% 0.2 256);
+  --color-accent-ink: oklch(99% 0.005 256);
+  --color-focus: oklch(58% 0.2 256);
+  --color-accent-soft: oklch(95.5% 0.025 256);
+
+  /* Form states */
+  --color-error: oklch(52% 0.19 28);
+  --color-success: oklch(50% 0.12 155);
+
+  /* Outbound CTA — the one warm counter-note to the cobalt signal */
+  --color-cta: oklch(56% 0.2 355);
+  --color-cta-hover: oklch(50% 0.2 355);
+  --color-cta-ink: oklch(99% 0.005 355);
+  --color-cta-text: oklch(56% 0.2 355);
+  --smudge-alpha: 0.05;
+
+  /* Graphite — the page's one dark band + the code/terminal cards */
+  --color-graphite: oklch(22% 0.016 260);
+  --color-graphite-2: oklch(27% 0.018 260);
+  --color-graphite-ink: oklch(93% 0.01 255);
+  --color-graphite-muted: oklch(66% 0.016 255);
+  --color-graphite-rule: oklch(38% 0.02 260);
+  --color-terminal: oklch(16% 0.012 260);
+  --color-accent-on-dark: oklch(74% 0.13 256);
+  --color-msedit-bar: oklch(50% 0.09 250);
+  --color-cta-on-dark: oklch(74% 0.15 355);
+  --color-success-on-dark: oklch(78% 0.14 155);
+
+  /* Fonts — self-hosted via next/font in src/app/layout.tsx, which sets
+     --font-display / --font-body / --font-mono on <html> (Space Grotesk /
+     Inter / JetBrains Mono). Listed here for portability if this token set
+     is reused outside this app: */
+  /* --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; */
+  /* --font-body: "Inter", ui-sans-serif, system-ui, sans-serif; */
+  /* --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace; */
+
+  /* Spacing — 4pt scale */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* Type scale — major third (1.25) */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-4xl: 3.8147rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-s: clamp(2.25rem, 4vw + 0.75rem, 3.8rem);
+
+  /* Radii — tight, ruler-drawn */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+
+  /* Rules */
+  --rule-hairline: 1px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  /* Z-index */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+/* Dark theme — same hues, lightness flipped. Applied when the visitor picks
+   dark, or (no explicit choice / no JS) when the OS prefers dark. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-paper: oklch(15.5% 0.012 258);
+  --color-paper-2: oklch(19.5% 0.014 258);
+  --color-rule: oklch(27% 0.016 258);
+  --color-rule-2: oklch(36% 0.018 258);
+
+  --color-ink: oklch(95% 0.006 255);
+  --color-ink-2: oklch(85% 0.01 255);
+  --color-muted: oklch(68% 0.014 255);
+
+  --color-accent: oklch(70% 0.16 256);
+  --color-accent-ink: oklch(15% 0.02 258);
+  --color-focus: oklch(72% 0.16 256);
+  --color-accent-soft: oklch(28% 0.06 256);
+
+  --color-error: oklch(72% 0.16 28);
+  --color-success: oklch(74% 0.14 155);
+
+  --color-cta-text: oklch(74% 0.15 355);
+  --smudge-alpha: 0.09;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+
+    --color-paper: oklch(15.5% 0.012 258);
+    --color-paper-2: oklch(19.5% 0.014 258);
+    --color-rule: oklch(27% 0.016 258);
+    --color-rule-2: oklch(36% 0.018 258);
+
+    --color-ink: oklch(95% 0.006 255);
+    --color-ink-2: oklch(85% 0.01 255);
+    --color-muted: oklch(68% 0.014 255);
+
+    --color-accent: oklch(70% 0.16 256);
+    --color-accent-ink: oklch(15% 0.02 258);
+    --color-focus: oklch(72% 0.16 256);
+    --color-accent-soft: oklch(28% 0.06 256);
+
+    --color-error: oklch(72% 0.16 28);
+    --color-success: oklch(74% 0.14 155);
+
+    --color-cta-text: oklch(74% 0.15 355);
+    --smudge-alpha: 0.09;
+  }
+}
