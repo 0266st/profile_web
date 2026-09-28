@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import CommandPalette from "./CommandPalette";
-import { GitHubIcon } from "./icons";
+import { BlogIcon } from "./icons";
 import { ThemeCycleButton, ThemeSegmented } from "./ThemeToggle";
 
 const LINKS = [
@@ -36,12 +36,12 @@ export default function Nav() {
           <ThemeCycleButton />
           <a
             className="btn btn--cta"
-            href="https://github.com/0266st"
+            href="https://blog.ztssst.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHubIcon className="btn__icon" />
-            <span className="btn__label">GitHub</span>
+            <BlogIcon className="btn__icon" />
+            <span className="btn__label">Blog</span>
             <span className="btn__ext" aria-hidden="true">↗</span>
             <span className="sr-only">(新しいタブで開く)</span>
           </a>

@@ -44,6 +44,18 @@ export function ShopIcon({ className, size = 16 }: IconProps) {
   );
 }
 
+// A pen nib over a line — the blog.
+export function BlogIcon({ className, size = 16 }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M16.9 2.6a2 2 0 0 1 2.83 0l1.67 1.67a2 2 0 0 1 0 2.83L10.3 18.2a1 1 0 0 1-.45.26l-4.5 1.2a.8.8 0 0 1-.98-.98l1.2-4.5a1 1 0 0 1 .26-.45L16.9 2.6ZM3 21h18a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2Z"
+      />
+    </svg>
+  );
+}
+
 export function FormIcon({ className, size = 16 }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">

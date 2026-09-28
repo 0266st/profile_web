@@ -3,7 +3,7 @@ import { ROLES } from "@/lib/profile";
 import { AGE_PUBLIC_KEY, SSH_PUBLIC_KEY } from "@/lib/keys";
 import { sshFingerprintArt } from "@/lib/ssh-randomart";
 import Link from "next/link";
-import { FormIcon, GitHubIcon, MailIcon, ShopIcon, TwitterIcon, YouTubeIcon } from "./icons";
+import { BlogIcon, FormIcon, GitHubIcon, MailIcon, ShopIcon, TwitterIcon, YouTubeIcon } from "./icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -15,6 +15,16 @@ export default function Footer() {
         <p className="wordmark">0266st / 0168th</p>
         <p className="foot-mast__tagline">{ROLES.join(" · ")}</p>
         <div className="foot-mast__links">
+          <a
+            href="https://blog.ztssst.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BlogIcon className="foot-mast__icon" />
+            <span className="foot-mast__label">Blog</span>
+            <span aria-hidden="true">↗</span>
+            <span className="sr-only">(新しいタブで開く)</span>
+          </a>
           <a
             href="https://github.com/0266st"
             target="_blank"

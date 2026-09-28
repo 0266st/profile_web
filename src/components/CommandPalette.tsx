@@ -31,6 +31,7 @@ const COMMANDS: Command[] = [
   { label: "Music", hint: "Section", href: "/#music" },
   { label: "Gear", hint: "Section", href: "/#gear" },
   { label: "問い合わせフォーム", hint: "Page", href: "/contact" },
+  { label: "Blog", hint: "Open ↗", href: "https://blog.ztssst.dev/", external: true },
   { label: "GitHub (0266st)", hint: "Open ↗", href: "https://github.com/0266st", external: true },
   { label: "Twitter (@0168th)", hint: "Open ↗", href: "https://twitter.com/0168th", external: true },
   { label: "YouTube (@0266st)", hint: "Open ↗", href: "https://www.youtube.com/@0266st", external: true },
